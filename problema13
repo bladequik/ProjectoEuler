@@ -1,0 +1,7 @@
+with open("13.txt") as textFile:                  
+    numbers = textFile.readlines();                 
+    for i in range(len(numbers)):                   
+        numbers[i] = int(numbers[i])  
+        
+                                
+print(str(sum(numbers))[0:10])                      
