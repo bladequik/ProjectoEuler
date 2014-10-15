@@ -1,0 +1,17 @@
+
+def divisivel ():
+    number =1
+    storage = False
+    for i in range (20,0,-1):
+            if number %i ==0:
+                if i == 1:
+                    storage = True
+                else:
+                    pass
+            else:
+                number = number+1
+                break
+                
+    return (number)
+
+#demora algum tempo a dar o resultado, mas funciona
