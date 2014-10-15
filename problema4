@@ -1,0 +1,28 @@
+def isPalindrome(n): 
+
+    check=False    
+    a=str(n)
+    b=a[::-1]
+    if a == b:
+        check=True
+    return check
+
+def getPalindrome():
+    x=999
+    y=x
+    mx=1
+    while y >= (x+1)/10:
+        while x>=100:
+            z=x*y
+            if isPalindrome(z):
+                if z>mx:
+                    mx=z
+                    a=x
+                    b=y
+            x-=1
+        x=999
+        y-=1
+    print (mx)
+
+
+getPalindrome()
