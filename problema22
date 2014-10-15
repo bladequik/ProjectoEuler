@@ -1,0 +1,24 @@
+abc = ['0', 'A', 'B', 'C', 'D', 'E', 'F', 
+       'G', 'H', 'I', 'J', 'K', 'L', 'M', 
+       'N', 'O', 'P', 'Q', 'R', 'S', 'T', 
+       'U', 'V', 'W', 'X', 'Y', 'Z']
+
+total = 0
+f = open('names.txt').readlines()
+s = f[0]
+s = s.replace('"', '')                      #Retira os " 
+names = s.split(',')                        #Põe numa lista [ , ]
+names.sort()                                #Põe por ordem alfabética
+
+def score(n):
+    score = 0
+    for i in n:
+        score += abc.index(i)
+    score *= (names.index(n)+1)
+    return score
+
+for i in names:
+    total += score(i)
+
+print (total)
+
