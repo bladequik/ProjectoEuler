@@ -1,0 +1,22 @@
+def is_Palindrome(x):
+    if str(x) == str(x)[::-1]:
+        return True
+    else:
+        return False
+
+def is_PalindromeBin(x):
+    b = str(bin(x))[2:]
+    if b == b[::-1]:
+        return True
+    else:
+        return False
+
+summ = 0
+
+for n in range(1,1000000):
+    if is_Palindrome(n):
+        if is_PalindromeBin(n):
+            #print(n,str(bin(n))[2:])
+            summ += n
+
+print(summ)
