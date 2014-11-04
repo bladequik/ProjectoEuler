@@ -1,0 +1,11 @@
+total = 1
+x=1 
+j=2 
+
+while j<=1000:
+    for i in range(0,4):
+        x+=j 
+        total+=x
+    j+=2 
+
+print (total)
