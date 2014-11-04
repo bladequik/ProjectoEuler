@@ -1,0 +1,11 @@
+count = 0
+total = 200
+for a in range(0,total+1,2):
+    for b in range(a,total+1,5):
+        for c in range(b,total+1,10):
+            for d in range(c,total+1,20):
+                for e in range(d,total+1,50):
+                    for f in range(e,total+1,100):
+                        for g in range(f,total+1,200):
+                            count += 1
+print(count)
