@@ -1,0 +1,19 @@
+soma = []
+for a in range(1, 1000):
+    b = a + 1
+    c = b + 1
+    while c < 1000:
+        while c**2 < a**2 + b**2:
+            c += 1
+        if c**2 == a**2 + b**2:
+            #print ('%d, %d, %d' % (a, b, c))
+            soma.append(a + b + c)
+        b += 1
+
+melhor = 0
+resposta = 0
+for i in range(1000):
+    if soma.count(i) > melhor:
+        melhor = soma.count(i)
+        resposta = i
+print (resposta)
