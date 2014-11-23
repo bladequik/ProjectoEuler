@@ -1,0 +1,18 @@
+m = t = 2
+
+def hexagonal(n):
+    return n*(2*n-1)
+def pentagonal(n):
+    return n*(3*n-1)/2
+def triangular(n) :
+    return n*(n+1)/2
+
+for n in range(2,100000):
+    while hexagonal(n)> pentagonal(m):
+        m += 1
+    if hexagonal(n) == pentagonal(m):
+        while pentagonal(m) > triangular(t):
+            t += 1
+        if pentagonal(m) == triangular(t):
+            print (hexagonal(n), pentagonal(m),triangular(t),n,m,t)
+
