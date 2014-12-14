@@ -1,0 +1,20 @@
+def isPalindrome(s):
+    if s == s[::-1]:
+        return True
+    return False
+
+def isLychrel(n):
+    for i in range(50):
+        n = n + int(str(n)[::-1])
+        if isPalindrome(str(n)):
+            return False
+    return True
+
+def lychrel(n):
+    count = 0
+    for i in range(n):
+        if isLychrel(i):
+            count = count + 1
+    return count
+
+print (lychrel(10000))
