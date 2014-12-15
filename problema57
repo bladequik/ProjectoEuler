@@ -1,0 +1,16 @@
+def square():
+    i = 0                  #iteração
+    n = 1                  #numerador
+    d = 1                  #denominador
+    count = 0
+    while i <= 1000:
+        dd = d + n         #próximo denominador
+        nn = d + dd        #próximo numerador
+        n,d = nn,dd
+        i += 1
+        if len(str(n)) > len(str(d)):
+            count += 1
+    return count
+
+
+square()
