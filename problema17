@@ -1,0 +1,21 @@
+unidades=["one","two","three","four","five","six","seven","eight","nine"]
+decimais=["ten","eleven","twelve","thirteen","fourteen","fifteen","sixteen","seventeen","eighteen","nineteen"]
+decimais1=["twenty","thirty","forty","fifty","sixty","seventy","eighty","ninety"]
+
+total=0
+for i in unidades:
+    total+=len(i)*(9*10+100)
+    
+for i in decimais:
+    total+=len(i)*10
+
+for i in decimais1:
+    total+=100*len(i)
+
+
+total+=len("hundred")*900
+total+=len("and")*891
+
+total+=len("onethousand")
+
+print (total)
