@@ -1,0 +1,16 @@
+def pentagonais():
+    n,d,dd = 1,4,3
+    while True:
+        yield n
+        n,d = n+d,d+dd
+        
+def diferenca(a):
+    b = set()
+    for j_k in a:
+        for k in b:
+            j = j_k - k
+            if j in b and k-j in b:
+                return k-j
+        b.add(j_k)
+        
+print(diferenca(pentagonais()))
